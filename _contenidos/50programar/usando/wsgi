@@ -1,0 +1,8 @@
+¿Para que sirve wsgi?
+Es una forma de ejecutar aplicaciones web. Cada vez que consultas o escribis datos en el servidor un proceso necesita calcular cosas, escribir en discos, etc. 
+Si vienen muchos pedidos al mismo tiempo ej. de varios usuarios se hace una cola.
+Igual que en un local comercial queres conseguir el mejor balance entre la velocidad a la que atendes y cuanto te cuesta poner muchso empleados/procesos en RAM que consume c/u 
+por ej.
+wsgi es un supervisor que se ocupa de eso, de un lado hay un webserver como nginx o apache, que le pasa los pedidos a wsgi, que tiene varios procesos con tu programa 
+y los monitorea y controla: ej. si dejan de responder o gastan mucha RAM los termina y lanza uno nuevo, tiene un par listos para responder siempre, etc. 
+Todo se configura desde un archivo.
